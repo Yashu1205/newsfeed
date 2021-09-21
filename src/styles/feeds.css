@@ -1,0 +1,56 @@
+header{
+  background-color: #198754;
+  color: white;
+}
+
+#feedInput { 
+    position: relative;
+    width: 500px;
+    border: 1px solid gray; 
+    scroll-behavior: smooth;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+#feedInput button{
+        position: absolute;
+        top: 25px;
+        right: 0;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        color: black;
+        background-color: transparent;
+        font-size: 18px;
+        border: 1px solid transparent;
+        border-radius: 50%;
+}
+
+#feedInput button:focus button:hover{
+    outline: none
+}
+
+.gif{
+  width: 100%;
+}
+
+.add-gif{
+    margin-top: 10px;
+    width: 150px;
+    background-color: #ededf2;
+    border-radius: 15%;
+}
+
+.gif::-webkit-scrollbar {
+  width: 0.5em;
+}
+ 
+.gif::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(58, 57, 57, 0.3);
+}
+ 
+.gif::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
