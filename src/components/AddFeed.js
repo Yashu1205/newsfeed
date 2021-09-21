@@ -17,6 +17,7 @@ const AddFeed = (props) => {
         if(isSaved){
             setMessage('')
             setGif('')
+            setDisableSubmit(true)
         }
     }, [isSaved])
 
