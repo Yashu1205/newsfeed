@@ -1,8 +1,14 @@
-import { useSelector } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
+import { deleteFeed } from "../actions/feedsAction"
 import FeedItem from "./FeedItem"
 
 const FeedsList = (props) => {
     const { feeds } = useSelector((state) => state.feeds)
+    const dispatch = useDispatch()
+
+    const removeFeed = (id) => {
+        dispatch(deleteFeed(id))
+    }
 
     return (
         <div className="mt-5">
@@ -10,7 +16,7 @@ const FeedsList = (props) => {
             {
                 feeds.map(feed => {
                     return (
-                        <FeedItem {...feed} key={feed.id}/>
+                        <FeedItem {...feed} key={feed.id} removeFeed={removeFeed}/>
                     )
                 })
             }

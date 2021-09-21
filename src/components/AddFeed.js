@@ -70,7 +70,7 @@ const AddFeed = (props) => {
         <form onSubmit={handleSubmit}>
             <div id="feedInput">
 
-                <textarea value={message} onChange={handleChange} className="p-3"
+                <textarea value={message} onChange={handleChange} className="p-3 w-100"
                         placeholder="What's on your mind?"
                         style={{resize:'none', border:'0',fontSize:`${message.length <= 60  ? '20px' : '15px' }`}}></textarea>
                 
