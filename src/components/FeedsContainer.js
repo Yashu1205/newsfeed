@@ -5,7 +5,7 @@ const FeedsContainer = () => {
 
     return(
         <div className="container">
-            <header className="text-center py-2 mb-2 ">
+            <header className="text-center py-2 mb-5 ">
                 <h2 className="fw-normal">Post Your Feeds</h2>
             </header>
             <AddFeed />
