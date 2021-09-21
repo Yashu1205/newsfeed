@@ -10,7 +10,7 @@
 - axios
 
 # DEMO
-- Live DEMO of the website is available here:[PREVIEW](https://focused-cray-371689.netlify.app/)
+- Live DEMO of the website is available here: [PREVIEW](https://focused-cray-371689.netlify.app/)
 
 # FEATURES
 - A new post can be insrted which can consists of text or GIF.
