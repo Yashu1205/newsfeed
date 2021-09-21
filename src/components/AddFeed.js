@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { useDispatch } from "react-redux"
 import { addFeeds } from "../actions/feedsAction"
 import { startGetTrendingGifs } from "../actions/gifsAction"
@@ -69,8 +69,8 @@ const AddFeed = (props) => {
                         style={{resize:'none', border:'0',fontSize:`${message.length <= 60  ? '20px' : '15px' }`}}></textarea>
                 
                 { gif && (
-                        <div className="text-center" style={{overflowY:'auto', height:'150px', position:'relative'}}>
-                            <img src={gif} className="gif" alt=""/> 
+                        <div className="text-center gif" style={{overflowY:'auto', height:'150px', position:'relative'}}>
+                            <img src={gif} alt="" width="100%"/> 
                             <button className="btn btn-small" onClick={removeGif}>X</button><br/>
                         </div>
                 )}

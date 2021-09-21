@@ -31,10 +31,6 @@ textarea:focus, input:focus{
     outline: none
 }
 
-.gif{
-  width: 100%;
-}
-
 .add-gif{
     margin-top: 10px;
     width: 150px;

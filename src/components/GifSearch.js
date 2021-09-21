@@ -26,12 +26,12 @@ const GifSearch = (props) => {
         <div className="card" style={{height: '400px', width: '300px', padding: '5px'}}>
             <input type="text" className="form-control mt-1" name="query" value={query} onChange={handleChange} placeholder="Search gifs"/>
             
-            <div style={{height: '500px', overflowY:'auto'}}>
+            <div className="gif" style={{height: '500px', overflowY:'auto'}}>
                 {
                     gifs.length > 0 ? (
                         gifs.map(gif => {
                             return (
-                                <img src={gif.images.original.url} width="290px" alt={gif.title}
+                                <img src={gif.images.original.url} width="280px" alt={gif.title}
                                     style={{cursor:'pointer', objectFit:'fill', padding:'5px'}}
                                     key={gif.id}
                                     onClick={addGif}/>
