@@ -9,18 +9,9 @@ const AddFeed = (props) => {
     const [message, setMessage] = useState('')
     const [gif, setGif] = useState('')
     const [showGif, setShowGif] = useState(false)
-    const [isSaved, setIsSaved] = useState(false)
     const [disableSubmit, setDisableSubmit] = useState(true)
     const dispatch = useDispatch()
-
-    useEffect(() => {
-        if(isSaved){
-            setMessage('')
-            setGif('')
-            setDisableSubmit(true)
-        }
-    }, [isSaved])
-
+ 
     const handleChange = (e) => {
         setMessage(e.target.value)
         if(e.target.value){
@@ -60,7 +51,9 @@ const AddFeed = (props) => {
         }
 
         const resetForm = () => {
-            setIsSaved(!isSaved)
+            setMessage('')
+            setGif('')
+            setDisableSubmit(true)
         }
         dispatch(addFeeds(formData, resetForm))
 
