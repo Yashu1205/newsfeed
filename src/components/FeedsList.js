@@ -12,13 +12,20 @@ const FeedsList = (props) => {
 
     return (
         <div className="mt-5">
-            <h3 style={{textAlign:'center'}}>NewsFeed</h3>
-            {
+            <h2 style={{textAlign:'center'}} className='bg-light py-2'>NewsFeed</h2>
+            { feeds.length > 0 ? (
+                
                 feeds.map(feed => {
                     return (
                         <FeedItem {...feed} key={feed.id} removeFeed={removeFeed}/>
                     )
                 })
+            ) : (
+                <>
+                    <h3>No feeds to show</h3>
+                    <h4>Add your feeds</h4>
+                </>
+            )
             }
             
 
